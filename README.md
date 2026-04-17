@@ -83,7 +83,6 @@ A full-stack web application to manage and track job applications, built with a 
 
 ## 📸 Screenshots
 
-### 🔐 Login Page
 ### 🔐 Authentication
 
 #### 📝 Registration
@@ -106,7 +105,7 @@ A full-stack web application to manage and track job applications, built with a 
 ![Create Application](screenshots/create-new-Application.png)
 
 #### ✏️ Update / 🗑️ Delete Application
-![Update/Delete Application](screenshots/Delete-or-Update-Application.png)
+![Update/Delete Application](screenshots/update-delete.png)
 
 ---
 
