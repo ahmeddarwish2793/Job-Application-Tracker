@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - Job Applications Tracker</title>
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+
+  <body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+    <div class="top-left">
+        <div class="logo-circle">
+            <i class="fa-solid fa-briefcase"></i>
+        </div>
+        <span class="logo-text">Job Application Tracker</span>
+    </div>
+
+    <div class="top-right">
+        <button class="profile-btn" onclick="location.href='profile.html'">
+            <i class="fa-regular fa-user"></i> Profile
+        </button>
+        <button class="logout-btn" id="logoutBtn">
+            Logout
+        </button>
+    </div>
+</div>
+
+
+<!-- MAIN CONTENT -->
+<div class="main-container">
+
+    <div class="welcome-header">
+        <div>
+            <h2 id="welcomeMessage"></h2>
+            <p id="applicationsCount"></p>
+        </div>
+
+        <button id="newApplicationBtn" 
+                class="button-primary header-button"
+                onclick="location.href='newapplication.html'">
+            + New Application
+        </button>
+    </div>
+
+    <div class="applications-grid" id="applicationsGrid">
+        <!-- Cards will be generated here -->
+    </div>
+
+</div>
+
+<!-- Application Details Modal -->
+<div class="details-overlay" id="detailsOverlay">
+  <div class="details-modal">
+
+    <div class="modal-header">
+      <h3>Application Details</h3>
+      <span class="close-details" id="closeDetails">&times;</span>
+    </div>
+
+    <label>Company Name</label>
+    <input type="text" id="detailCompany" class="input-field">
+
+    <label>Position</label>
+    <input type="text" id="detailPosition" class="input-field">
+
+    <label>Status</label>
+    <select id="detailStatus" class="input-field">
+      <option value="pending">Pending</option>
+      <option value="interview">Interview</option>
+      <option value="accepted">Accepted</option>
+      <option value="rejected">Rejected</option>
+    </select>
+
+    <label>Applied Date</label>
+    <input type="date" id="detailDate" class="input-field">
+
+    <div class="modal-buttons">
+      <button class="button-primary" id="updateBtn">
+        <i class="fa-solid fa-pen"></i> Update
+      </button>
+
+      <button class="delete-btn" id="deleteBtn">
+        <i class="fa-solid fa-trash"></i> Delete
+      </button>
+    </div>
+  </div>
+</div>
+
+   <!-- Delete Confirmation Modal -->
+<div class="confirm-overlay" id="confirmOverlay">
+  <div class="confirm-modal">
+    <h3>Delete Application</h3>
+    <p>Do you really want to delete this job application?</p>
+
+    <div class="confirm-buttons">
+      <button class="confirm-no" id="confirmNo">No</button>
+      <button class="confirm-yes" id="confirmYes">Yes</button>
+    </div>
+  </div>
+</div>
+
+<!-- Logout Confirmation Modal -->
+<div class="confirm-overlay" id="logoutOverlay">
+  <div class="confirm-modal">
+
+    <h3>Logout</h3>
+    <p>Are you sure you want to log out?</p>
+
+    <div class="confirm-buttons">
+      <button class="confirm-no" id="logoutNo">No</button>
+      <button class="confirm-yes" id="logoutYes">Yes</button>
+    </div>
+
+  </div>
+</div>
+
+<script src="../js/authGuard.js"></script>
+<script src="../js/main.js"></script>
+
+</body>

@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - Job Applications Tracker</title>
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/newApp.css" />
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+
+  <body class="create-page">
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <button class="back-btn" onclick="goBack()">
+      <i class="fa-solid fa-arrow-left"></i>
+      Back to Dashboard
+    </button>
+  </div>
+
+  <!-- Card Section -->
+  <div class="create-container">
+    <div class="create-card">
+
+      <h2>Create New Job Application</h2>
+      <p class="subtitle">
+        Add a new job application to track your progress
+      </p>
+
+      <form id="createForm">
+
+        <label>Company Name <span>*</span></label>
+        <input type="text" id="companyInput" required 
+        placeholder="e.g., Google, Microsoft, Apple"/>
+
+        <label>Position <span>*</span></label>
+        <input type="text" id="positionInput" required
+        placeholder="e.g., Software Engineer, Product Engineer" />
+
+        <label>Status <span>*</span></label>
+        <select id="statusInput" required>
+          <option value="pending">Pending</option>
+          <option value="interview">Interview</option>
+          <option value="accepted">Accepted</option>
+          <option value="rejected">Rejected</option>
+        </select>
+
+        <label>Applied Date</label>
+        <input type="date" id="dateInput" />
+
+        <div class="button-row">
+          <button type="submit" class="button-primary">
+            <i class="fa-regular fa-floppy-disk"></i>
+            Save Application
+          </button>
+
+          <button type="button" class="button-secondary" onclick="goBack()">
+            Cancel
+          </button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+  <script src="../js/authGuard.js"></script>
+  <script src="../js/newApp.js"></script>
+</body>
