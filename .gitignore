@@ -1,0 +1,25 @@
+# Mac
+.DS_Store
+
+# IntelliJ
+.idea/
+*.iml
+
+# Logs
+*.log
+
+# Node
+node_modules/
+
+# Build
+target/
+dist/
+
+# Environment
+.env
+
+# Uploads
+backend/uploads/
+
+# OS
+Thumbs.db
