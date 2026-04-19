@@ -118,6 +118,20 @@ A full-stack web application to manage and track job applications, built with a 
 ![Logout](screenshots/Logout.png)
 ---
 
+## 📚 Documentation & Diagrams
+
+Detailed system design and UML diagrams are available in the GitHub Wiki.
+
+The Wiki includes:
+- 🧩 Use Case Diagrams
+- 🏗️ Class Diagrams
+- 🔄 Activity Diagrams
+
+👉 Please check the Wiki for a deeper understanding of the system design and architecture:
+[Project Wiki](../../wiki)
+
+---
+
 ## 💡 About This Project
 
 This project represents my personal implementation and learning journey in building full-stack applications with a backend-focused approach.
