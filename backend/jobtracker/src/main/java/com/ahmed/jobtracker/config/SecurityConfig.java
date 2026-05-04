@@ -28,7 +28,8 @@ public class SecurityConfig {
                 java.util.List.of("http://localhost:63342",
                         "http://localhost:3000",
                         "http://localhost:5173",
-                        "http://localhost:8081")
+                        "http://localhost:8081",
+                        "https://darling-kataifi-682204.netlify.app")
         );
 
         configuration.setAllowedMethods(
