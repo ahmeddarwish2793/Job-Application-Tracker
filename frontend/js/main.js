@@ -1,4 +1,8 @@
-const API_BASE_URL = "http://localhost:8080/applications";
+const BASE_URL = window.location.hostname === "localhost"
+    ? "http://localhost:8080"
+    : "https://job-application-tracker-production-64d5.up.railway.app";
+
+const API_BASE_URL = `${BASE_URL}/applications`;
 
 let selectedApplication = null;
 

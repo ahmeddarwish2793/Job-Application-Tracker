@@ -6,7 +6,9 @@ if (existingUser && existingUser.token) {
 }
 
 //API BASE URL
-const API_BASE = "http://localhost:8080/auth";
+const API_BASE = window.location.hostname === "localhost"
+    ? "http://localhost:8080/auth"
+    : "https://job-application-tracker-production-64d5.up.railway.app/auth";
 
 // Register form
 const registerForm = document.getElementById("registerForm");

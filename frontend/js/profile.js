@@ -1,5 +1,9 @@
 let cropper;
 
+const BASE_URL = window.location.hostname === "localhost"
+    ? "http://localhost:8080"
+    : "https://job-application-tracker-production-64d5.up.railway.app";
+
 // AUTH CHECK
 
 const user = JSON.parse(localStorage.getItem("user"));
@@ -36,7 +40,7 @@ function renderAvatar() {
     if (user.profileImage) {
 
         profileImage.src =
-            `http://localhost:8080/uploads/${user.profileImage}`;
+            `${BASE_URL}/uploads/${user.profileImage}`;
 
         profileImage.style.display = "block";
         avatarLetters.style.display = "none";
@@ -109,7 +113,7 @@ cropBtn.addEventListener("click", async function () {
     try {
 
         const response = await fetch(
-            "http://localhost:8080/users/profile-image",
+            `${BASE_URL}/users/profile-image`,
             {
                 method: "POST",
                 headers: {
@@ -183,7 +187,7 @@ changePasswordBtn.addEventListener("click", async function () {
     try {
 
         const response = await fetch(
-            "http://localhost:8080/users/change-password",
+            `${BASE_URL}/users/change-password`,
             {
                 method: "PUT",
                 headers: {
