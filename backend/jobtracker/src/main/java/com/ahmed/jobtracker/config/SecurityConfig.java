@@ -9,6 +9,8 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
+import java.util.List;
+
 @Configuration
 public class SecurityConfig {
 
@@ -24,13 +26,7 @@ public class SecurityConfig {
         org.springframework.web.cors.CorsConfiguration configuration =
                 new org.springframework.web.cors.CorsConfiguration();
 
-        configuration.setAllowedOrigins(
-                java.util.List.of("http://localhost:63342",
-                        "http://localhost:3000",
-                        "http://localhost:5173",
-                        "http://localhost:8081",
-                        "https://darling-kataifi-682204.netlify.app")
-        );
+        configuration.setAllowedOriginPatterns(List.of("*"));
 
         configuration.setAllowedMethods(
                 java.util.List.of("GET", "POST", "PUT", "DELETE", "OPTIONS")
