@@ -1,1 +1,7 @@
-/        /pages/login.html   200
+/ /pages/login.html 200
+/main.html /pages/main.html 200
+/login.html /pages/login.html 200
+/registerScene.html /pages/registerScene.html 200
+/profile.html /pages/profile.html 200
+/newApp.html /pages/newApp.html 200
+/reset-password.html /pages/reset-password.html 200
