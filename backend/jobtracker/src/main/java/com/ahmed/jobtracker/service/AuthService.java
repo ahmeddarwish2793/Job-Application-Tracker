@@ -132,9 +132,13 @@ public class AuthService {
         tokenRepository.save(passwordResetToken);
 
         //Simulate sending email
-        String resetLink = "http://localhost:8081/pages/reset-password.html?token=" + token;
+        String resetLink = "https://darling-kataifi-682204.netlify.app/reset-password.html?token=" + token;
 
-        emailService.sendPasswordResetEmail(user.getEmail(), resetLink);
+        try {
+            emailService.sendPasswordResetEmail(user.getEmail(), resetLink);
+        } catch (Exception e) {
+            e.printStackTrace(); // log error but DO NOT stop request
+        }
     }
 
     public void resetPassword(String token, String newPassword) {
